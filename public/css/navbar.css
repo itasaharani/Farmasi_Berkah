@@ -1,0 +1,77 @@
+/* Memulai Navigation Bar */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(191, 224, 238, 0.85);
+  color: #626953;
+  padding: 10px 0;
+  z-index: 80;
+  width: 100%;
+  font-family: "League Spartan", sans-serif;
+}
+
+.navbar-logo img {
+  width: 60px;
+  padding-left: 30px;
+  padding-top: -27px;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  margin: 14px;
+  padding: 0px 0px;
+  padding-right: -30px;
+  width: 100%;
+  justify-content: right;
+  font-size: 24px;
+  font-weight: 600;
+  margin-right: -800px;
+  width: fit-content;
+}
+
+.navbar-menu li {
+  margin-right: 20px;
+  padding-left: 16px;
+}
+
+.navbar-menu li:last-child {
+  margin-right: 0;
+}
+
+.navbar-menu a {
+  text-decoration: none;
+  color: #6d9cec;
+  font-weight: bold;
+}
+
+.bmi-button {
+  background-color: #6d9cec;
+  border: none;
+  padding: 5px 14px;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  color: #fdf7e5;
+  margin-right: 10px;
+  font-size: 17px;
+  font-weight: 800;
+  border-radius: 40px;
+}
+
+.navbar-menu li a:hover {
+  color: rgba(98, 105, 83, 0.8);
+  text-decoration: none;
+  padding-bottom: 3px;
+  border-bottom: 3px solid #626953;
+  width: 0%;
+}
+
+.navbar-bmi .bmi-button:hover {
+  background-color: rgba(158, 167, 136, 0.9);
+  color: #626953;
+}
