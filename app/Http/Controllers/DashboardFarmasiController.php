@@ -45,4 +45,21 @@ class DashboardFarmasiController extends Controller
             return redirect()->route('dashboard.farmasi');
         }
     }
+    public function goToFarmasiView()
+    {
+        return view('farmasi');
+    }
+
+    public function adminFarmasi()
+    {
+        return view('adminFarmasi');
+    }
+
+    
+    public function userFarmasi()
+    {
+        return view('userFarmasi');
+    }
+    
+
 }

@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardFarmasiController;
 
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,3 +22,7 @@ use App\Http\Controllers\DashboardFarmasiController;
 
 Route::get('/', [DashboardFarmasiController::class, 'index'])->name('dashboard.farmasi');
 Route::get('/dashboard/farmasi/{page}', [DashboardFarmasiController::class, 'showPage'])->name('dashboard.page');
+Route::get('/farmasi', [DashboardFarmasiController::class, 'goToFarmasiView'])->name('farmasi.view');
+Route::get('/adminFarmasi', [DashboardFarmasiController::class, 'adminFarmasi'])->name('adminFarmasi.view');
+Route::get('/userFarmasi', [DashboardFarmasiController::class, 'userFarmasi'])->name('userFarmasi.view');
+

@@ -22,19 +22,24 @@
     </style>
 </head>
 <body>
-    <!-- Memulai Navigation Bar -->
-    <nav class="navbar">
-        <div class="navbar-logo">
+<!-- Memulai Navigation Bar -->
+<nav class="navbar">
+    <div class="navbar-logo">
         <img src="{{asset('img/hospital/Logo.png')}}" alt="Logo" />
-        </div>
-        <ul class="navbar-menu">
-            <li><a href="/">Home</a></li>
-            <li><a href="">Farmasi</a></li>
-        </ul>
-        <div class="navbar-bmi">
+    </div>
+    <ul class="navbar-menu">
+        <li><a href="/">Home</a></li>
+        <li class="nav-item">
+            <a href="{{ route('farmasi.view') }}" class="farm-button">Farmasi</a>
+            <a href="{{ route('adminFarmasi.view') }}" class="farm-button">Admin Farmasi</a>
+            <a href="{{ route('userFarmasi.view') }}" class="farm-button">Antrian Farmasi</a>
+        </li>
+    </ul>
+    <div class="navbar-bmi">
         <a href="{{ route('dashboard.page', 'obat') }}" class="bmi-button">Obat</a>
-        </div>
-    </nav>
+    </div>
+</nav>
+
 
     <!-- Memulai Isi -->
 

@@ -41,6 +41,10 @@
                     sku.textContent = item.sku;
                     row.appendChild(sku);
 
+                    var id_rm = document.createElement("td");
+                    id_rm.textContent = item.id_rm;
+                    row.appendChild(id_rm);
+
                     var label_catatan = document.createElement("td");
                     label_catatan.textContent = item.label_catatan;
                     row.appendChild(label_catatan);
@@ -139,6 +143,7 @@
             } else {
                 let data = JSON.parse(xhr.responseText);
                 document.getElementById('updateSku').value = data.sku;
+                document.getElementById('updateIdRm').value = data.id_rm;
                 document.getElementById('updateLabelCatatan').value = data.label_catatan;
                 document.getElementById('updateJumlah').value = data.jumlah;
                 jQuery('#updateModal').modal('show'); // Menampilkan modal
@@ -153,6 +158,7 @@
     function submitUpdateForm() {
         let data = {
             sku: document.getElementById('updateSku').value,
+            id_rm: document.getElementById('updateIdRm').value,
             label_catatan: document.getElementById('updateLabelCatatan').value,
             jumlah: document.getElementById('updateJumlah').value
         };
@@ -185,6 +191,7 @@
 
             let data = {
                 sku: document.getElementById('sku').value,
+                id_rm: document.getElementById('id_rm').value,
                 label_catatan: document.getElementById('label_catatan').value,
                 jumlah: document.getElementById('jumlah').value
             };
@@ -224,11 +231,14 @@
     </div>
     <ul class="navbar-menu">
         <li><a href="/">Home</a></li>
-        <li><a href="">Farmasi</a></li>
+        <li class="nav-item">
+            <a href="{{ route('farmasi.view') }}" class="farm-button">Farmasi</a>
+            <a href="{{ route('adminFarmasi.view') }}" class="farm-button">Admin Farmasi</a>
+            <a href="{{ route('userFarmasi.view') }}" class="farm-button">Antrian Farmasi</a>
+        </li>
     </ul>
     <div class="navbar-bmi">
         <a href="{{ route('dashboard.page', 'obat') }}" class="bmi-button">Obat</a>
-
     </div>
 </nav>
 
@@ -245,6 +255,10 @@
       <div class="modal-body">
         <form id="updateForm">
           <input type="hidden" id="updateSku" name="sku">
+          <div class="form-group">
+            <label for="updateIdRm">Id Rm:</label>
+            <input type="text" class="form-control" id="updateIdRm" name="updateIdRm">
+          </div>
           <div class="form-group">
             <label for="updateLabelCatatan">Label Catatan:</label>
             <input type="text" class="form-control" id="updateLabelCatatan" name="label_catatan">
@@ -274,6 +288,7 @@
             <tr>
                 <th>ID</th>
                 <th>SKU</th>
+                <th>Id Rm</th>
                 <th>Label Catatan</th>
                 <th>Jumlah</th>
                 <th>Action</th>
@@ -292,6 +307,10 @@
         <div class="form-group">
             <label for="sku">SKU:</label>
             <input type="text" class="form-control" id="sku" name="sku">
+        </div>
+        <div class="form-group">
+            <label for="id_rm">Id Rm:</label>
+            <input type="text" class="form-control" id="id_rm" name="id_rm">
         </div>
         <div class="form-group">
             <label for="label">Label Catatan:</label>
