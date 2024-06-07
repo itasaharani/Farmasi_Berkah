@@ -80,7 +80,7 @@
     // Isi kode untuk melakukan GET request dan menampilkan data di tabel
     let xhr = new XMLHttpRequest();
 
-    xhr.open('GET', 'http://localhost/silk2024-slim-main/public/obat');
+    xhr.open('GET', 'http://192.168.78.114/silk2024-slim-main/public/obat');
 
     xhr.send();
 
@@ -137,7 +137,7 @@
 
     function post_obat(data) {
         let xhr = new XMLHttpRequest();
-        xhr.open('POST', 'http://localhost/silk2024-slim-main/public/obat');
+        xhr.open('POST', 'http://192.168.78.114/silk2024-slim-main/public/obat');
         xhr.setRequestHeader('Content-Type', 'application/json');
 
         xhr.onload = function() {

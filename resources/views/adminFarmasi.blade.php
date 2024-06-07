@@ -21,7 +21,7 @@
         function get_all() {
             let xhr = new XMLHttpRequest();
 
-            xhr.open('GET', 'http://localhost/silk2024-slim-main/public/tampil_all');
+            xhr.open('GET', 'http://192.168.78.114/silk2024-slim-main/public/tampil_all');
 
             xhr.send();
 
@@ -79,7 +79,7 @@
         }
 
         function prosesItem(id) {
-            fetch('http://localhost/silk2024-slim-main/public/proses_rm/' + id, {
+            fetch('http://192.168.78.114/silk2024-slim-main/public/proses_rm/' + id, {
                 method: 'PUT'
             }).then(response => {
                 if (response.ok) {
@@ -94,7 +94,7 @@
         }
 
         function selesaiItem(id) {
-            fetch('http://localhost/silk2024-slim-main/public/selesai_rm/' + id, {
+            fetch('http://192.168.78.114/silk2024-slim-main/public/selesai_rm/' + id, {
                 method: 'PUT'
             }).then(response => {
                 if (response.ok) {

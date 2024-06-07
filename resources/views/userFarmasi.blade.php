@@ -85,7 +85,8 @@
         function get_tunggu() {
             let xhr = new XMLHttpRequest();
 
-            xhr.open('GET', 'http://localhost/silk2024-slim-main/public/tampil_tunggu');
+            xhr.open('GET', 'http://192.168.78.114/silk2024-slim-main/public/tampil_tunggu');
+            // xhr.open('GET', 'http://192.168.0.15/slimsilk2024/public/tampil_tunggu');
 
             xhr.send();
 
@@ -125,7 +126,9 @@
         function get_proses() {
             let xhr = new XMLHttpRequest();
 
-            xhr.open('GET', 'http://localhost/silk2024-slim-main/public/tampil_proses');
+            // xhr.open('GET', 'http://192.168.0.15/slimsilk2024/public/tampil_proses');
+            xhr.open('GET', 'http://192.168.78.114/silk2024-slim-main/public/tampil_proses');
+          
 
             xhr.send();
 

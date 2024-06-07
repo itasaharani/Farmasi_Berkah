@@ -25,7 +25,7 @@
                 let xhr = new XMLHttpRequest();
 
                 // 2. Configure it: GET-request for the URL /article/.../load
-                xhr.open('GET', 'http://localhost/silk2024-slim-main/public/obat');
+                xhr.open('GET', 'http://192.168.78.114/silk2024-slim-main/public/obat');
 
                 // 3. Send the request over the network
                 xhr.send();

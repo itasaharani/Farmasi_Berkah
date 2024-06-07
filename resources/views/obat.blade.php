@@ -22,7 +22,7 @@
    function get_obat() {
         let xhr = new XMLHttpRequest();
 
-        xhr.open('GET', 'http://localhost/silk2024-slim-main/public/obat');
+        xhr.open('GET', 'http://192.168.78.114/silk2024-slim-main/public/obat');
 
         xhr.send();
 
@@ -86,7 +86,7 @@
 
     function post_obat(data) {
         let xhr = new XMLHttpRequest();
-        xhr.open('POST', 'http://localhost/silk2024-slim-main/public/obat');
+        xhr.open('POST', 'http://192.168.78.114/silk2024-slim-main/public/obat');
         xhr.setRequestHeader('Content-Type', 'application/json');
 
         xhr.onload = function() {
@@ -113,7 +113,7 @@
 
     function delete_obat(sku) {
         let xhr = new XMLHttpRequest();
-        xhr.open('DELETE', `http://localhost/silk2024-slim-main/public/obat/${sku}`);
+        xhr.open('DELETE', `http://192.168.78.114/silk2024-slim-main/public/obat/${sku}`);
         xhr.setRequestHeader('Content-Type', 'application/json');
 
         xhr.onload = function() {
@@ -134,7 +134,7 @@
 
         function editData(sku) {
         let xhr = new XMLHttpRequest();
-        xhr.open('GET', `http://localhost/silk2024-slim-main/public/obat/${sku}`);
+        xhr.open('GET', `http://192.168.78.114/silk2024-slim-main/public/obat/${sku}`);
         xhr.send();
 
         xhr.onload = function() {
@@ -164,7 +164,7 @@
         };
 
         let xhr = new XMLHttpRequest();
-        xhr.open('PUT', `http://localhost/silk2024-slim-main/public/obat/${data.sku}`);
+        xhr.open('PUT', `http://192.168.78.114/silk2024-slim-main/public/obat/${data.sku}`);
         xhr.setRequestHeader('Content-Type', 'application/json');
 
         xhr.onload = function() {
@@ -257,7 +257,7 @@
           <input type="hidden" id="updateSku" name="sku">
           <div class="form-group">
             <label for="updateIdRm">Id Rm:</label>
-            <input type="text" class="form-control" id="updateIdRm" name="updateIdRm">
+            <input type="text" class="form-control" id="updateIdRm" name="updateIdRm" readOnly>
           </div>
           <div class="form-group">
             <label for="updateLabelCatatan">Label Catatan:</label>

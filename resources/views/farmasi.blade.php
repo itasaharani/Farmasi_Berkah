@@ -22,7 +22,7 @@
    function get_farmasi() {
         let xhr = new XMLHttpRequest();
 
-        xhr.open('GET', 'http://localhost/silk2024-slim-main/public/farmasi');
+        xhr.open('GET', 'http://192.168.78.114/silk2024-slim-main/public/farmasi');
 
         xhr.send();
 
@@ -87,7 +87,7 @@
     function post_farmasi(data) {
         let xhr = new XMLHttpRequest();
         // xhr.open('POST', 'http://192.168.0.8/slimsilk2024/public/farmasi');
-        xhr.open('POST', 'http://localhost/silk2024-slim-main/public/farmasi');
+        xhr.open('POST', 'http://192.168.78.114/silk2024-slim-main/public/farmasi');
         xhr.setRequestHeader('Content-Type', 'application/json');
 
         xhr.onload = function() {
@@ -114,7 +114,7 @@
 
     function delete_farmasi(sku) {
         let xhr = new XMLHttpRequest();
-        xhr.open('DELETE', 'http://localhost/silk2024-slim-main/public/farmasi/${sku}');
+        xhr.open('DELETE', 'http://192.168.78.114/silk2024-slim-main/public/farmasi/${sku}');
         // xhr.open('DELETE', 'http://192.168.0.8/slimsilk2024/public/farmasi/${sku}');
         xhr.setRequestHeader('Content-Type', 'application/json');
 
@@ -138,7 +138,7 @@
         let xhr = new XMLHttpRequest();
         // 
         
-        xhr.open('GET', `http://localhost/silk2024-slim-main/public/farmasi/${sku}`);
+        xhr.open('GET', `http://192.168.78.114/silk2024-slim-main/public/farmasi/${sku}`);
         // xhr.open('GET', `http://192.168.0.8/slimsilk2024/public/farmasi/${sku}`);
         xhr.send();
 
@@ -170,7 +170,7 @@
 
         let xhr = new XMLHttpRequest();
         
-        xhr.open('PUT', `http://localhost/silk2024-slim-main/public/farmasi/${data.sku}`);
+        xhr.open('PUT', `http://192.168.137.1/silk2024-slim-main/public/farmasi/${data.sku}`);
         xhr.setRequestHeader('Content-Type', 'application/json');
 
         xhr.onload = function() {
